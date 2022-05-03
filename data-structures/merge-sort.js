@@ -1,3 +1,7 @@
+
+// Time complexity: O(nlogn)
+// Recurrence relation: 2T(n/2) + O(n)
+// Space complexity: O(n) for auxiliary array of size n | max call stack size: O(logn)+1
 const mergeSort = (() => {
 
     function sortAndMerge(leftSubArray, rightSubArray) {
@@ -34,8 +38,8 @@ const mergeSort = (() => {
 
     const mergeSortDriver = (array, start, end) => {
         // When array has one or no elements, return the array
-        if (start === end) {
-            return array;
+        if (start >= end) {
+            return [array[start]];
         }
 
         let mid = start + Math.floor((end - start) / 2);
@@ -46,11 +50,18 @@ const mergeSort = (() => {
         return sortAndMerge(leftSubArray, rightSubArray);
     }
 
-    // The main algorithm
+    // The main function
     return (array) => {
         let start = 0;
         let end = array.length - 1;
 
-        mergeSortDriver(array, start, end);
+        return mergeSortDriver(array, start, end);
     }
 })();
+
+
+// Test files
+console.log(mergeSort([5, 2, 3, 7, 4]));
+console.log(mergeSort([5, 2, 3, 7, 4, 20, 1, 16, 21, 20]));
+console.log(mergeSort([5]));
+console.log(mergeSort([]));
