@@ -25,17 +25,4 @@ class Solution {
       
       return arr;
     }
-
-    // public static void main(String[] args) {
-    //     Solution solution = new Solution();
-    //     int[] result = solution.replaceElements(new int[]{17,18,5,4,6,1});
-    //     for (int i : result) {
-    //         System.out.print(i + " ");
-    //     }
-    //     System.out.println();
-    //     int[] result2 = solution.replaceElements(new int[]{400});
-    //     for (int i : result2) {
-    //         System.out.print(i + " ");
-    //     }
-    // }
 }
