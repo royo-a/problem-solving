@@ -2,7 +2,6 @@ package solutions.leetcode;
 
 class Solution {
   public int lengthOfLastWord(String s) {
-    int result = 0;
     int index = s.length()-1;
     int count = 0;
 
